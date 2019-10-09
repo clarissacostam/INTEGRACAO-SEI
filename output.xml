@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191009 09:45:50.151" generator="Robot 3.1.2 (Python 2.7.16 on linux2)">
+<suite source="/home/clarissa/Projects/INTEGRAÇÃOSEI/SEI/TestCase/01__CreateProcess.robot" id="s1" name="CreateProcess">
+<kw type="setup" name="Abrir navegador" library="processo">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20191009 09:45:50.545" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<status status="PASS" endtime="20191009 09:45:52.013" starttime="20191009 09:45:50.545"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" endtime="20191009 09:45:52.014" starttime="20191009 09:45:52.013"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>1680</arg>
+<arg>900</arg>
+</arguments>
+<status status="PASS" endtime="20191009 09:45:52.119" starttime="20191009 09:45:52.015"></status>
+</kw>
+<status status="PASS" endtime="20191009 09:45:52.119" starttime="20191009 09:45:50.544"></status>
+</kw>
+<test id="s1-t1" name="LOGIN X CRIANDO UM PROCESSO NO SEI.">
+<kw name="DADO QUE realizo o login e crio processo no sei" library="processo">
+<kw name="ACESSO SEI" library="commonSei">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>https://homologasei.prodemge.gov.br/</arg>
+</arguments>
+<msg timestamp="20191009 09:45:52.121" level="INFO">Opening url 'https://homologasei.prodemge.gov.br/'</msg>
+<status status="PASS" endtime="20191009 09:45:53.097" starttime="20191009 09:45:52.121"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20191009 09:45:53.202" starttime="20191009 09:45:53.097"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${IUSER}</arg>
+<arg>${USER}</arg>
+</arguments>
+<msg timestamp="20191009 09:45:53.202" level="INFO">Typing text 'admdeer' into text field '//*[@id="txtUsuario"]'.</msg>
+<status status="PASS" endtime="20191009 09:45:53.286" starttime="20191009 09:45:53.202"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${IPASSWORD}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20191009 09:45:53.287" level="INFO">Typing password into text field '//*[@id="pwdSenha"]'.</msg>
+<status status="PASS" endtime="20191009 09:45:53.366" starttime="20191009 09:45:53.286"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${ORGAOLOGIN}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20191009 09:45:53.367" level="INFO">Selecting options from selection list '//*[@id="selOrgao"]' by value 2.</msg>
+<status status="PASS" endtime="20191009 09:45:53.495" starttime="20191009 09:45:53.367"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20191009 09:45:56.496" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191009 09:45:56.496" starttime="20191009 09:45:53.496"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${BTACESSAR}</arg>
+</arguments>
+<msg timestamp="20191009 09:45:56.497" level="INFO">Clicking button '//*[@id="sbmLogin"]'.</msg>
+<status status="PASS" endtime="20191009 09:45:58.039" starttime="20191009 09:45:56.497"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20191009 09:45:58.207" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-127.png"&gt;&lt;img src="selenium-screenshot-127.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191009 09:45:58.208" starttime="20191009 09:45:58.040"></status>
+</kw>
+<status status="PASS" endtime="20191009 09:45:58.208" starttime="20191009 09:45:52.121"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20191009 09:46:01.209" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191009 09:46:01.209" starttime="20191009 09:45:58.208"></status>
+</kw>
+<status status="PASS" endtime="20191009 09:46:01.210" starttime="20191009 09:45:52.120"></status>
+</kw>
+<kw name="QUANDO inicio um processo no sei" library="processo">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${BTINICIARPROCESS}</arg>
+</arguments>
+<status status="PASS" endtime="20191009 09:46:01.254" starttime="20191009 09:46:01.211"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${BTINICIARPROCESS}</arg>
+<arg>Iniciar Processo</arg>
+</arguments>
+<msg timestamp="20191009 09:46:01.255" level="INFO">Verifying element '//*[@id="main-menu"]/li[3]/a' contains exact text 'Iniciar Processo'.</msg>
+<status status="PASS" endtime="20191009 09:46:01.292" starttime="20191009 09:46:01.254"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${BTINICIARPROCESS}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:01.293" level="INFO">Clicking element '//*[@id="main-menu"]/li[3]/a'.</msg>
+<status status="PASS" endtime="20191009 09:46:01.861" starttime="20191009 09:46:01.292"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20191009 09:46:05.862" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20191009 09:46:05.862" starttime="20191009 09:46:01.862"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${PROCEDIMENTOGERAL}</arg>
+<arg>Corregedoria: Procedimento Geral</arg>
+</arguments>
+<msg timestamp="20191009 09:46:05.863" level="INFO">Verifying element '//*[@id="tblTipoProcedimento"]/tbody/tr[9]/td/a[2]' contains exact text 'Corregedoria: Procedimento Geral'.</msg>
+<status status="PASS" endtime="20191009 09:46:05.908" starttime="20191009 09:46:05.863"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${PROCEDIMENTOGERAL}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:05.909" level="INFO">Clicking element '//*[@id="tblTipoProcedimento"]/tbody/tr[9]/td/a[2]'.</msg>
+<status status="PASS" endtime="20191009 09:46:06.518" starttime="20191009 09:46:05.908"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Iniciar Processo</arg>
+</arguments>
+<msg timestamp="20191009 09:46:06.538" level="INFO">Current page contains text 'Iniciar Processo'.</msg>
+<status status="PASS" endtime="20191009 09:46:06.538" starttime="20191009 09:46:06.518"></status>
+</kw>
+<kw name="Radio Button Should Be Set To" library="SeleniumLibrary">
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<arguments>
+<arg>rdoProtocolo</arg>
+<arg>A</arg>
+</arguments>
+<msg timestamp="20191009 09:46:06.539" level="INFO">Verifying radio button 'rdoProtocolo' has selection 'A'.</msg>
+<status status="PASS" endtime="20191009 09:46:06.567" starttime="20191009 09:46:06.539"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TXTESPECIFICACAO}</arg>
+<arg>TESTES ROBOT SEI IMPORTAÇÃO PROCESSOS SCOP</arg>
+</arguments>
+<msg timestamp="20191009 09:46:06.568" level="INFO">Typing text 'TESTES ROBOT SEI IMPORTAÇÃO PROCESSOS SCOP' into text field '//*[@id="txtDescricao"]'.</msg>
+<status status="PASS" endtime="20191009 09:46:06.888" starttime="20191009 09:46:06.568"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20191009 09:46:11.889" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191009 09:46:11.889" starttime="20191009 09:46:06.888"></status>
+</kw>
+<status status="PASS" endtime="20191009 09:46:11.890" starttime="20191009 09:46:01.210"></status>
+</kw>
+<kw name="E seleciono o assunto do processo" library="processo">
+<kw name="Click Image" library="SeleniumLibrary">
+<doc>Clicks an image identified by ``locator``.</doc>
+<arguments>
+<arg>${PESQUISAASSUNTO}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:11.891" level="INFO">Clicking image '//*[@id="imgPesquisarAssuntos"]'.</msg>
+<status status="PASS" endtime="20191009 09:46:11.990" starttime="20191009 09:46:11.891"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20191009 09:46:16.991" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191009 09:46:16.991" starttime="20191009 09:46:11.990"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.querySelector("#divInfraModalFundo").click()</arg>
+</arguments>
+<msg timestamp="20191009 09:46:16.993" level="INFO">Executing JavaScript:
+document.querySelector("#divInfraModalFundo").click()
+Without any arguments.</msg>
+<status status="PASS" endtime="20191009 09:46:17.002" starttime="20191009 09:46:16.991"></status>
+</kw>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>SEI - Selecionar Assuntos</arg>
+</arguments>
+<status status="PASS" endtime="20191009 09:46:17.103" starttime="20191009 09:46:17.003"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191009 09:46:19.104" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191009 09:46:19.105" starttime="20191009 09:46:17.104"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20191009 09:46:19.206" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-128.png"&gt;&lt;img src="selenium-screenshot-128.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191009 09:46:19.206" starttime="20191009 09:46:19.105"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser URL.</doc>
+<status status="PASS" endtime="20191009 09:46:19.211" starttime="20191009 09:46:19.206"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ASSUNTO001}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:19.212" level="INFO">Clicking element '//*[@id="chkInfraItem0"]'.</msg>
+<status status="PASS" endtime="20191009 09:46:19.273" starttime="20191009 09:46:19.212"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ASSUNTO002}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:19.273" level="INFO">Clicking element '//*[@id="chkInfraItem2"]'.</msg>
+<status status="PASS" endtime="20191009 09:46:19.338" starttime="20191009 09:46:19.273"></status>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<arguments>
+<arg>${ASSUNTO001}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:19.338" level="INFO">Verifying checkbox '//*[@id="chkInfraItem0"]' is selected.</msg>
+<status status="PASS" endtime="20191009 09:46:19.372" starttime="20191009 09:46:19.338"></status>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<arguments>
+<arg>${ASSUNTO002}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:19.373" level="INFO">Verifying checkbox '//*[@id="chkInfraItem2"]' is selected.</msg>
+<status status="PASS" endtime="20191009 09:46:19.407" starttime="20191009 09:46:19.372"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${BTTRANSPORTAR}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:19.407" level="INFO">Clicking button '//*[@id="btnTransportarSelecao"]'.</msg>
+<status status="PASS" endtime="20191009 09:46:19.520" starttime="20191009 09:46:19.407"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${BTFECHAR}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:19.521" level="INFO">Clicking button '//*[@id="btnFecharSelecao"]'.</msg>
+<status status="PASS" endtime="20191009 09:46:19.628" starttime="20191009 09:46:19.520"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191009 09:46:21.629" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191009 09:46:21.629" starttime="20191009 09:46:19.628"></status>
+</kw>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>SEI - Iniciar Processo</arg>
+</arguments>
+<status status="PASS" endtime="20191009 09:46:21.668" starttime="20191009 09:46:21.630"></status>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>rdoNivelAcesso</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20191009 09:46:21.669" level="INFO">Selecting '0' from radio button 'rdoNivelAcesso'.</msg>
+<status status="PASS" endtime="20191009 09:46:21.744" starttime="20191009 09:46:21.669"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets focus to element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="selAssuntos"]/option</arg>
+</arguments>
+<status status="PASS" endtime="20191009 09:46:21.772" starttime="20191009 09:46:21.745"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${ITEN1CAMPO}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:21.798" level="INFO">Element '//*[@id="selAssuntos"]/option[1]' is displayed.</msg>
+<status status="PASS" endtime="20191009 09:46:21.798" starttime="20191009 09:46:21.772"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${ITEN2CAMPO}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:21.821" level="INFO">Element '//*[@id="selAssuntos"]/option[2]' is displayed.</msg>
+<status status="PASS" endtime="20191009 09:46:21.821" starttime="20191009 09:46:21.798"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20191009 09:46:21.957" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-129.png"&gt;&lt;img src="selenium-screenshot-129.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191009 09:46:21.957" starttime="20191009 09:46:21.821"></status>
+</kw>
+<status status="PASS" endtime="20191009 09:46:21.957" starttime="20191009 09:46:11.890"></status>
+</kw>
+<kw name="E seleciono o Interessados do processo" library="processo">
+<kw name="Click Image" library="SeleniumLibrary">
+<doc>Clicks an image identified by ``locator``.</doc>
+<arguments>
+<arg>${PESQUISAINTERESSADOS}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:21.958" level="INFO">Clicking image '//*[@id="imgSelecionarGrupo"]'.</msg>
+<status status="PASS" endtime="20191009 09:46:22.056" starttime="20191009 09:46:21.958"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20191009 09:46:27.057" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191009 09:46:27.057" starttime="20191009 09:46:22.056"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.querySelector("#divInfraModalFundo").click()</arg>
+</arguments>
+<msg timestamp="20191009 09:46:27.059" level="INFO">Executing JavaScript:
+document.querySelector("#divInfraModalFundo").click()
+Without any arguments.</msg>
+<status status="PASS" endtime="20191009 09:46:27.066" starttime="20191009 09:46:27.057"></status>
+</kw>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>SEI - Selecionar Contatos</arg>
+</arguments>
+<status status="PASS" endtime="20191009 09:46:27.164" starttime="20191009 09:46:27.067"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191009 09:46:29.166" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191009 09:46:29.167" starttime="20191009 09:46:27.164"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20191009 09:46:29.250" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-130.png"&gt;&lt;img src="selenium-screenshot-130.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191009 09:46:29.251" starttime="20191009 09:46:29.167"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser URL.</doc>
+<status status="PASS" endtime="20191009 09:46:29.257" starttime="20191009 09:46:29.251"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ASSUNTO001}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:29.257" level="INFO">Clicking element '//*[@id="chkInfraItem0"]'.</msg>
+<status status="PASS" endtime="20191009 09:46:29.324" starttime="20191009 09:46:29.257"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ASSUNTO002}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:29.325" level="INFO">Clicking element '//*[@id="chkInfraItem2"]'.</msg>
+<status status="PASS" endtime="20191009 09:46:29.395" starttime="20191009 09:46:29.324"></status>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<arguments>
+<arg>${ASSUNTO001}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:29.395" level="INFO">Verifying checkbox '//*[@id="chkInfraItem0"]' is selected.</msg>
+<status status="PASS" endtime="20191009 09:46:29.437" starttime="20191009 09:46:29.395"></status>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<arguments>
+<arg>${ASSUNTO002}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:29.437" level="INFO">Verifying checkbox '//*[@id="chkInfraItem2"]' is selected.</msg>
+<status status="PASS" endtime="20191009 09:46:29.476" starttime="20191009 09:46:29.437"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191009 09:46:31.477" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191009 09:46:31.477" starttime="20191009 09:46:29.477"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${BTTRANSPORTAR}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:31.478" level="INFO">Clicking button '//*[@id="btnTransportarSelecao"]'.</msg>
+<status status="PASS" endtime="20191009 09:46:31.604" starttime="20191009 09:46:31.478"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${BTFECHAR}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:31.605" level="INFO">Clicking button '//*[@id="btnFecharSelecao"]'.</msg>
+<status status="PASS" endtime="20191009 09:46:31.705" starttime="20191009 09:46:31.605"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191009 09:46:33.705" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191009 09:46:33.706" starttime="20191009 09:46:31.705"></status>
+</kw>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>SEI - Iniciar Processo</arg>
+</arguments>
+<status status="PASS" endtime="20191009 09:46:33.739" starttime="20191009 09:46:33.706"></status>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>rdoNivelAcesso</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20191009 09:46:33.739" level="INFO">Selecting '0' from radio button 'rdoNivelAcesso'.</msg>
+<status status="PASS" endtime="20191009 09:46:33.778" starttime="20191009 09:46:33.739"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets focus to element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="selAssuntos"]/option</arg>
+</arguments>
+<status status="PASS" endtime="20191009 09:46:33.800" starttime="20191009 09:46:33.778"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${ITEN1CAMPO}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:33.835" level="INFO">Element '//*[@id="selAssuntos"]/option[1]' is displayed.</msg>
+<status status="PASS" endtime="20191009 09:46:33.835" starttime="20191009 09:46:33.801"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${ITEN2CAMPO}</arg>
+</arguments>
+<msg timestamp="20191009 09:46:33.870" level="INFO">Element '//*[@id="selAssuntos"]/option[2]' is displayed.</msg>
+<status status="PASS" endtime="20191009 09:46:33.870" starttime="20191009 09:46:33.835"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20191009 09:46:34.005" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-131.png"&gt;&lt;img src="selenium-screenshot-131.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191009 09:46:34.005" starttime="20191009 09:46:33.870"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="btnSalvar"]</arg>
+</arguments>
+<msg timestamp="20191009 09:46:34.005" level="INFO">Clicking button '//*[@id="btnSalvar"]'.</msg>
+<status status="PASS" endtime="20191009 09:46:35.951" starttime="20191009 09:46:34.005"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20191009 09:46:36.487" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-132.png"&gt;&lt;img src="selenium-screenshot-132.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191009 09:46:36.487" starttime="20191009 09:46:35.951"></status>
+</kw>
+<status status="PASS" endtime="20191009 09:46:36.487" starttime="20191009 09:46:21.957"></status>
+</kw>
+<doc>Criando dados do processo para importar os mesmos e realizar a triagem deles no SCOP.</doc>
+<status status="PASS" endtime="20191009 09:46:36.488" critical="yes" starttime="20191009 09:45:52.119"></status>
+</test>
+<status status="PASS" endtime="20191009 09:46:36.488" starttime="20191009 09:45:50.152"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="CreateProcess" pass="1">CreateProcess</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
