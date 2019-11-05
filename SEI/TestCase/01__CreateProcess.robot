@@ -1,7 +1,9 @@
 *** Settings ***
 Resource          ../resources/commonSei.robot
+Resource          ../resources/commonScop.robot
 Resource          ../resources/processo.robot
-Suite Setup       Abrir Navegador
+Resource          ../resources/triagemDoc.robot
+Suite Setup       triagemDoc.Abrir Navegador
 # Suite Teardown    Fechar navegador
 
 
@@ -12,8 +14,22 @@ LOGIN X CRIANDO UM PROCESSO NO SEI.
     QUANDO inicio um processo no sei
         E seleciono o assunto do processo
         E seleciono o Interessados do processo
-        E atribuo o numero do processo @{CODPROCESSO}
-        E realizo o upload de arquivos dentro do processo @{CODPROCESSO}
+        E atribuo o numero do processo "@{CODPROCESSO}"
+        E realizo o upload doc externo "@{CODPROCESSO}"
+        E realizo o segundo upload doc externo "@{CODPROCESSO}"
+        E realizo o terceiro upload doc externo "@{CODPROCESSO}"
+        E realizo o quarto upload doc externo "@{CODPROCESSO}"
+    ENTAO valido o doc importado no processo
+
+INTEGRANDO PROCESSO NO SCOP
+    [Documentation]     Validação da integração cadastrados no SEI p/ SCOP.
+        DADO QUE realizo o login no SCOP.
+    QUANDO atribuo o processo
+        E inicio a triagem doc no SCOP
+
+
+    # QUANDO o sistema carrega o processo
+        # E verifico o processo @{CODPROCESSO}
 
     # QUANDO o sistema carrega o processo
     #     E libero todos os documentos aguardando liberação
