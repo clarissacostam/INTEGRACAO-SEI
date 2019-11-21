@@ -1,1 +1,1 @@
-*** Esse projeto tem como finalidade validar as informações da integração entre os sistemas SEI.gov e SCOP.net 
+### Esse projeto tem como finalidade validar informações da integração entre os sistemas SEI.gov e SCOP.net
