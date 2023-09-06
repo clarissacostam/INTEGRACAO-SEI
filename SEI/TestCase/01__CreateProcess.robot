@@ -28,17 +28,17 @@ INTEGRANDO PROCESSO NO SCOP
         E inicio a triagem doc no SCOP
 
 
-    # QUANDO o sistema carrega o processo
-        # E verifico o processo @{CODPROCESSO}
+    QUANDO o sistema carrega o processo
+        E verifico o processo @{CODPROCESSO}
 
-    # QUANDO o sistema carrega o processo
-    #     E libero todos os documentos aguardando liberação
-    # ENTÃO o(s) documento(s) sigiloso(s) é(são) exibido(s):
-    #     1. Doc. principal com mov.: "Despacho"; Data: "DATA_ATUAL"; Ícone: "Gabinete"
-    #         Mov. relacionada ao doc. "1": "Proferido despacho de mero expediente"; Data: "DATA_ATUAL"
-    #     2. Doc. principal com mov.: "Despacho"; Data: "DATA_ATUAL"; Parte(s): "Manoel, Thales"; Ícone: "Gabinete"
-    #         Mov. relacionada ao doc. "2": "Proferido despacho de mero expediente"; Data: "DATA_ATUAL"
-    #     E o(s) documento(s) não liberado(s) é(são) exibido(s):
-    #         1. Doc. secundário: "Ofício"; Parte(s): "Manoel"; Ícone: "Cartório"
-    #         2. Doc. secundário: "Ofício"; Parte(s): "Manoel"; Ícone: "Cartório"
-    #         3. Doc. secundário: "Ofício"; Parte(s): "Thales"; Ícone: "Cartório"
+    QUANDO o sistema carrega o processo
+        E libero todos os documentos aguardando liberação
+    ENTÃO o(s) documento(s) sigiloso(s) é(são) exibido(s):
+        1. Doc. principal com mov.: "Despacho"; Data: "DATA_ATUAL"; Ícone: "Gabinete"
+           Mov. relacionada ao doc. "1": "Proferido despacho de mero expediente"; Data: "DATA_ATUAL"
+        2. Doc. principal com mov.: "Despacho"; Data: "DATA_ATUAL"; Parte(s): "Manoel, Thales"; Ícone: "Gabinete"
+           Mov. relacionada ao doc. "2": "Proferido despacho de mero expediente"; Data: "DATA_ATUAL"
+        E o(s) documento(s) não liberado(s) é(são) exibido(s):
+             1. Doc. secundário: "Ofício"; Parte(s): "Manoel"; Ícone: "Cartório"
+             2. Doc. secundário: "Ofício"; Parte(s): "Manoel"; Ícone: "Cartório"
+             3. Doc. secundário: "Ofício"; Parte(s): "Thales"; Ícone: "Cartório"
