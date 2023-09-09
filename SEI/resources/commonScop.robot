@@ -203,17 +203,17 @@ Capture cod processo SEI
     Set Global Variable                      ${WORK}
 
 
-# Defesa de Auto de Infração Nº 0005.01.0001362/2019-95
+Defesa de Auto de Infração Nº 0005.01.0001362/2019-95
 
 
-    # ${work}=        Get Text         //*[@id="conteudo"]/table[1]/tbody/tr[1]/td[1]
-    # Set Global Variable              ${work}
-    # # ${rest}    ${last} =	         Split String From Right              ${work}[-1]       max_split=-1
-    # ${rest} =	           Split String	     	   ${work}.i         max_split=-1
-    # Sleep    3s
-    # ${str} =	           Remove String    ${rest}    Defesa de Auto de Infração Nº 0005.01.0001362/2019-95         Defesa de Auto de Infração Nº
-    # Set Variable                     ${rest}
-    #
-    # Log                              ${work}
-    # Log                              ${rest}
-    # Go Back
+    ${work}=        Get Text         //*[@id="conteudo"]/table[1]/tbody/tr[1]/td[1]
+    Set Global Variable              ${work}
+    ${rest}    ${last} =	         Split String From Right              ${work}[-1]       max_split=-1
+    ${rest} =	           Split String	     	   ${work}.i         max_split=-1
+    Sleep    3s
+    ${str} =	           Remove String    ${rest}    Defesa de Auto de Infração Nº 0005.01.0001362/2019-95         Defesa de Auto de Infração Nº
+    Set Variable                     ${rest}
+    
+    Log                              ${work}
+    Log                              ${rest}
+    Go Back
