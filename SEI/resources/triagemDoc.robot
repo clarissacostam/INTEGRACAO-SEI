@@ -30,19 +30,19 @@ QUANDO atribuo o processo
     ${GETPROCESSSCOP}=      Get Value         ${INPUTPROCESSSCOP}
     Set Suite Variable               ${GETPROCESSSCOP}
 
-    # Click Button                     ${BTPESQUISAPROCS}
-    # Click Element                    //*[@id="root"]/div/div/div/div[1]/div/ul/div[1]
-    # Wait Until Element Is Visible    ${CHECKATRIBUIRPROCESS}
-    # Click Element                    ${CHECKATRIBUIRPROCESS}
-    # Click Element                    //*[@id="root"]/div/div/div/div[1]/div/ul/div[2]
-    # Wait Until Element Is Visible    ${CHECKATRIBUIRPROCESS}
-    # Click Element                    ${CHECKATRIBUIRPROCESS}
-    # Click Element                    //*[@id="root"]/div/div/div/div[1]/div/ul/div[3]
-    # Wait Until Element Is Visible    ${CHECKATRIBUIRPROCESS}
-    # Click Element                    ${CHECKATRIBUIRPROCESS}
-    # Click Element                    //*[@id="root"]/div/div/div/div[1]/div/ul/div[4]
-    # Wait Until Element Is Visible    ${CHECKATRIBUIRPROCESS}
-    # Click Element                    ${CHECKATRIBUIRPROCESS}
+    Click Button                     ${BTPESQUISAPROCS}
+    Click Element                    //*[@id="root"]/div/div/div/div[1]/div/ul/div[1]
+    Wait Until Element Is Visible    ${CHECKATRIBUIRPROCESS}
+    Click Element                    ${CHECKATRIBUIRPROCESS}
+    Click Element                    //*[@id="root"]/div/div/div/div[1]/div/ul/div[2]
+    Wait Until Element Is Visible    ${CHECKATRIBUIRPROCESS}
+    Click Element                    ${CHECKATRIBUIRPROCESS}
+    Click Element                    //*[@id="root"]/div/div/div/div[1]/div/ul/div[3]
+    Wait Until Element Is Visible    ${CHECKATRIBUIRPROCESS}
+    Click Element                    ${CHECKATRIBUIRPROCESS}
+    Click Element                    //*[@id="root"]/div/div/div/div[1]/div/ul/div[4]
+    Wait Until Element Is Visible    ${CHECKATRIBUIRPROCESS}
+    Click Element                    ${CHECKATRIBUIRPROCESS}
     Sleep    3s
 
 E inicio a triagem doc no SCOP
